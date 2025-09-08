@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+.bayon-regular {
+	font-family: 'Bayon', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.manrope-regular {
+	font-family: 'Manrope', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.manrope-bold {
+	font-family: 'Manrope', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+:root {
+	--main-bg-color: #292929;
+}
+
+body {
+	background-color: var(--main-bg-color);
+	font-family: 'Bayon', sans-serif;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.hero {
+  
+  background-image: url('/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -1000;
+}
+
+.register {
+	background-image: url('/register-bg1.png');
+	background-size: contain;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.gift-bg {
+	position: absolute;
+	top: -50px;
+	right: 0;
+	width: 400px;
+	height: 400px;
+	z-index: -10;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.gift-bg {
+		display: none;
+	}
+}
