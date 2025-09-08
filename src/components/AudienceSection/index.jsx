@@ -38,7 +38,7 @@ const AudienceSection = () => {
 					))}
 				</ul>
 
-				<div className='relative cursor-pointer md:w-[400px] mx-auto mt-16'>
+				<a href='#register' className='block relative cursor-pointer md:w-[400px] mx-auto mt-16'>
 					<img
 						className='absolute top-[50%] left-[-24px] transform -translate-y-1/2 w-[150px] h-[150px] '
 						src='/button-img.png'
@@ -56,7 +56,7 @@ const AudienceSection = () => {
 					>
 						RO’YXATDAN O’TISH
 					</button>
-				</div>
+				</a>
 			</div>
 		</section>
 	)

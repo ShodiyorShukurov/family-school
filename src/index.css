@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 
+html{
+	scroll-behavior: smooth;
+}
+
 .bayon-regular {
 	font-family: 'Bayon', sans-serif;
 	font-weight: 400;

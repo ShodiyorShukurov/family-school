@@ -43,7 +43,7 @@ const Register = () => {
 	}
 
 	return (
-		<section className='min-h-screen register relative rounded-t-[60px] pt-[150px]'>
+		<section className='min-h-screen register relative rounded-t-[60px] pt-[150px]' id='register'>
 			<div className='container'>
 				<div className='bg-[#1D1D1D] rounded-[20px] overflow-hidden flex flex-col-reverse md:flex-row  relative'>
 					{/* Left Side - Image */}
