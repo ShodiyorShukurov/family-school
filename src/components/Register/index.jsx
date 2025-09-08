@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
 const Register = () => {
-	const BOT_TOKEN = '7320721739:AAEQbW4cB-FGtoKy4ZmPmWD6-pJyvLCmta0'
-	const CHAT_ID = '-1003052182662'
 
 	const [form, setForm] = useState({ name: '', phone: '' })
 	const [status, setStatus] = useState('idle')
@@ -23,31 +21,22 @@ const Register = () => {
 			return
 		}
 
-		const message = `
-<b>Yangi xabar:</b>\n
-Ism: ${form.name}
-Telefon: <a href="tel:${form.phone}">${form.phone}</a>`
-
 		try {
-			const res = await fetch(
-				`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-				{
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({
-						chat_id: CHAT_ID,
-						text: message,
-						parse_mode: 'HTML',
-					}),
-				}
-			)
+			await fetch(`https://script.google.com/macros/s/AKfycbx6ui9lRSM354aM-5GWPgkhYY7W5ER85ziaNrPXAfYs-RhQV8W769yg2yquSQJ41EXP/exec`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					fullName: form.name,
+					phoneNumber: form.phone,
+				}),
+				mode: 'no-cors',
+				redirect: 'follow',
+			})
 
-			if (res.ok) {
-				setStatus('success')
-				setForm({ name: '', phone: '', company: '' })
-			} else {
-				setStatus('error')
-			}
+			setStatus('success')
+			setForm({ name: '', phone: '', company: '' })
 		} catch {
 			setStatus('error')
 		}
