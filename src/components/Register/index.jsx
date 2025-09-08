@@ -29,7 +29,7 @@ const Register = () => {
 				},
 				body: JSON.stringify({
 					fullName: form.name,
-					phoneNumber: form.phone,
+					phone: form.phone,
 				}),
 				mode: 'no-cors',
 				redirect: 'follow',
@@ -115,6 +115,7 @@ const Register = () => {
 									}}
 									type='submit'
 									className='w-full pl-[40px] text-[#403211] md:text-[24px] py-4 rounded-[6px] manrope-bold cursor-pointer'
+									disabled={status === 'sending'}
 								>
 									{status === 'sending'
 										? 'Yuborilmoqda...'
