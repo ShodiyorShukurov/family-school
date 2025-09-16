@@ -138,11 +138,11 @@ const Register = () => {
 										Ro'yxatdan o'tganingiz uchun rahmat!
 									</h2>
 									<p className='mb-6 text-gray-700'>
-										Yopiq Telegram kanalimizga qo'shiling. AI yangiliklari va
+										Yopiq Telegram kanalimizga qo'shiling. Yangiliklar va
 										kelgusi tadbirlar haqida xabardor bo‘ling.
 									</p>
 									<a
-										href='https://t.me/YOUR_CHANNEL_USERNAME' // Bu yerga o'z kanal linkingizni qo'ying
+										href='https://t.me/otaonalarakademiyasi' // Bu yerga o'z kanal linkingizni qo'ying
 										target='_blank'
 										rel='noopener noreferrer'
 										className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition'
