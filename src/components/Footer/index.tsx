@@ -18,14 +18,6 @@ const Footer = () => {
 						</a>
           </div>
         </div>
-
-
-        {/* Right Section */}
-        <div>
-          <p className="font-semibold mb-2">Contact:</p>
-          <p className="text-sm mb-1">example@gmail.com</p>
-          <p className="text-sm mb-1">+998 123 45 67</p>
-      </div>
       </div>
     </footer>
   );
