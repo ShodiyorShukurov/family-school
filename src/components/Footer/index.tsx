@@ -10,7 +10,7 @@ const Footer = () => {
             <img src="/footer-icon.svg" alt="footer icon" width={200}  />
           </div>
           <div className="flex gap-4 mt-4">
-            <a className='w-[47px] h-[47px] bg-white flex justify-center items-center rounded-full' href="https://t.me/otaonalarakademiyasi#">
+            <a className='w-[47px] h-[47px] bg-white flex justify-center items-center rounded-full' href="https://t.me/+JbNmN4a0wTczN2Vi">
 							<img src="/telegram.svg" alt="Telegram" />
 						</a>
             <a className='w-[47px] h-[47px] bg-white flex justify-center items-center rounded-full' href="https://www.instagram.com/otaonalarakademiyasi?igsh=MXR5enM4eHozcHZuMg==">

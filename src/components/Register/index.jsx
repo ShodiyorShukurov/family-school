@@ -13,11 +13,9 @@ const Register = () => {
 		e.preventDefault()
 		setStatus('sending')
 
-		// ✅ Telefon raqami tekshiruvi
-		const uzbekPhoneRegex = /^\+998\d{9}$/
-		if (!uzbekPhoneRegex.test(form.phone)) {
+		if (form.phone.length > 0 && form.name.length > 0) {
 			setStatus('error')
-			alert('Пожалуйста, введите корректный номер в формате +998xxxxxxxxx')
+			alert("Iltimos, barcha maydonlarni to'ldiring.")
 			return
 		}
 
