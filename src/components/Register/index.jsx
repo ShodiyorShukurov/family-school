@@ -13,7 +13,8 @@ const Register = () => {
 		e.preventDefault()
 		setStatus('sending')
 
-		if (form.phone.length > 0 && form.name.length > 0) {
+
+		if (form.phone.length === 0 && form.name.length === 0) {
 			setStatus('error')
 			alert("Iltimos, barcha maydonlarni to'ldiring.")
 			return
@@ -140,7 +141,7 @@ const Register = () => {
 										kelgusi tadbirlar haqida xabardor bo‘ling.
 									</p>
 									<a
-										href='https://t.me/otaonalarakademiyasi' // Bu yerga o'z kanal linkingizni qo'ying
+										href='https://t.me/+JbNmN4a0wTczN2Vi' // Bu yerga o'z kanal linkingizni qo'ying
 										target='_blank'
 										rel='noopener noreferrer'
 										className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition'
