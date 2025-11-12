@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 
 const Register = () => {
 
@@ -16,7 +16,7 @@ const Register = () => {
 
 		if (form.phone.length === 0 && form.name.length === 0) {
 			setStatus('error')
-			alert("Iltimos, barcha maydonlarni to'ldiring.")
+		
 			return
 		}
 
@@ -42,7 +42,7 @@ const Register = () => {
 	}
 
 	return (
-		<section className='min-h-screen register relative rounded-t-[60px] pt-[150px]' id='register'>
+		<section className='min-h-screen register relative rounded-t-[60px] pt-[150px] register-section'>
 			<div className='container'>
 				<div className='bg-[#1D1D1D] rounded-[20px] overflow-hidden flex flex-col-reverse md:flex-row  relative'>
 					{/* Left Side - Image */}
@@ -71,30 +71,47 @@ const Register = () => {
 										type='text'
 										placeholder='Ismingiz'
 										value={form.name}
-										onChange={handleChange}
+										onChange={(e) =>{
+											handleChange(e)
+											setStatus('idle')
+										}}
 										className='w-full pr-4 pl-14 py-4 rounded-[18px]  text-white border border-[#848484] focus:outline-none focus:ring-2 focus:ring-[#EDD7A1] manrope-regular'
 									/>
 									<img
 										src='/user-icon.svg'
 										alt='user icon'
-										className='absolute top-[50%] left-4 transform -translate-y-1/2'
+										className='absolute top-[30%] left-4 transform -translate-y-1/2'
 									/>
+								{status === 'error' && (
+									<p className='text-red-500 text-sm mt-2'>
+										Iltimos, barcha maydonlarni to‘ldiring.
+									</p>
+								)}
 								</div>
+
 
 								<div className='relative'>
 									<input
 										name='phone'
 										type='tel'
 										value={form.phone}
-										onChange={handleChange}
+										onChange={(e) =>{
+											handleChange(e)
+											setStatus('idle')
+										}}
 										placeholder='Telefon raqamingiz'
 										className='w-full pr-4 pl-14 py-4 rounded-[18px]  text-white border border-[#848484] focus:outline-none focus:ring-2 focus:ring-[#EDD7A1] manrope-regular'
 									/>
 									<img
 										src='/user-icon.svg'
 										alt='user icon'
-										className='absolute top-[50%] left-4 transform -translate-y-1/2'
+										className='absolute top-[30%] left-4 transform -translate-y-1/2'
 									/>
+								{status === 'error' && (
+									<p className='text-red-500 text-sm mt-2'>
+										Iltimos, barcha maydonlarni to‘ldiring.
+									</p>
+								)}
 								</div>
 							</div>
 
